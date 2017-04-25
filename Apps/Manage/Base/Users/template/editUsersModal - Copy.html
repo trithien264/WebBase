@@ -1,0 +1,31 @@
+﻿
+<div my-dragable id="myModal" class="table-responsive" style="width:100%">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" ng-click="$close()" aria-hidden="true">&times;</button>
+            <h3 class="modal-title">Edit User</h3>
+        </div>
+        <div class="modal-body">
+            <table cellpadding="3" cellspacing="0" class="table table-bordered">
+                <tr>
+                    <td>user_id</td>
+                    <td><input class="input" type="text" disabled value="{{entity.user_id}}" /></td>
+
+                    <td>user_nm</td>
+                    <td><input class="input" type="text" ng-model="entity.user_nm" /></td>
+                </tr>
+                <tr>
+                    <td>user_desc</td>
+                    <td><input class="input" type="text" ng-model="entity.user_desc" /></td>
+
+                    <td>email</td>
+                    <td><input class="input" type="text" ng-model="entity.email" /></td>
+                </tr>
+            </table>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="save('save',entity)">Save</button>
+            <button class="btn btn-primary" ng-click="$close()">Cancel</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+﻿<div class="container">
+    <div class="form-group">
+        <label for="inputDesc" class="control-label col-xs-2" n-lang="USER_DESC">Họ Tên:</label>
+        <div class="col-xs-10">
+            <input type="text" class="form-control" id="inputDesc" n-lang="attr_placeholder" code="USER_DESC" placeholder="Nhập vào họ tên" ng-model="entity.user_desc">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail" class="control-label col-xs-2" n-lang="EMAIL">Địa chỉ Email: </label>
+        <div class="col-xs-10">
+            <input class="form-control" type="email" id="inputEmail" n-lang="attr_placeholder" code="EMAIL" placeholder="Nhập vào email" ng-model="entity.email" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail" class="control-label col-xs-2" n-lang="PASSWORD">Mật khẩu: </label>
+        <div class="col-xs-10">
+            <input class="form-control" type="password" id="inputEmail" n-lang="attr_placeholder" code="PASSWORD" placeholder="Nhập vào mật khẩu" ng-model="entity.pwd" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-2">
+        </div>
+        <div class="col-xs-4">
+            <div style="clear:both">
+                <label n-lang="REQUIRE_ACTIVECODE">Nhập vào mã xác nhận:</label>
+                <input class="form-control" type="text" ng-model="entity.textCaptChar" id="textCaptChar" name="textCaptChar">
+               
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-2">
+        </div>
+        <div class="col-xs-10">
+            <input type="button" class="btn btn-primary" n-lang="attr_value" code="REGISTER" ng-click="register('save',entity)" value="Đăng ký">
+        </div>
+    </div>
+
+</div>
+

@@ -1,0 +1,117 @@
+﻿﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ManagerAg.master.cs" Inherits="ManagerAg" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="ngMasterAg">
+<head id="Head1" runat="server">
+    <title></title>
+
+    <style>
+        .loading {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+      
+
+
+
+.modal-draggable .modal-header:hover {
+  cursor: move;
+}
+
+.modal-header{
+   cursor: move;
+  }
+
+      
+    </style>
+    <script type="text/javascript" src="<%= ResolveClientUrl("~/")%>Pub/EasyLayout/Js/jquery191.min.js"></script>
+    <script src="<%= ResolveClientUrl("~/")%>Pub/libAngular/angularjs/angular.min.js"></script>
+    <script src="<%= ResolveClientUrl("~/")%>Pub/libAngular/angularjs/angular-animate.js"></script>
+    <script src="<%= ResolveClientUrl("~/")%>Pub/libAngular/angularjs/angular-touch.js"></script>
+
+    <script src="<%= ResolveClientUrl("~/")%>Pub/libAngular/angularjs/ui-grid/csv.js"></script>
+    <script src="<%= ResolveClientUrl("~/")%>Pub/libAngular/angularjs/ui-grid/pdfmake.js"></script>    
+    <script src="<%= ResolveClientUrl("~/")%>Pub/libAngular/angularjs/ui-grid/ui-grid.js"></script>
+    <link rel="stylesheet" href="<%= ResolveClientUrl("~/")%>Pub/libAngular/angularjs/ui-grid/ui-grid.css" type="text/css">
+    <link rel="stylesheet" href="<%= ResolveClientUrl("~/")%>Pub/libAngular/angularjs/ui-grid/ui-grid-v1.css" type="text/css">
+
+
+    <link href="<%= ResolveClientUrl("~/")%>Pub/EasyLayout/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="<%= ResolveClientUrl("~/")%>Pub/EasyLayout/bootstrap/css/bootstrap_new.css" rel="stylesheet" />   
+    <script src="<%= ResolveClientUrl("~/")%>Pub/libAngular/bootstrap/ui-bootstrap-tpls-0.13.4.js"></script>
+    <link href="<%= ResolveClientUrl("~/")%>Pub/EasyLayout/bootstrap/css/bootstrap-glyphicons.css" rel="stylesheet" />
+
+    <link href="<%= ResolveClientUrl("~/")%>Pub/libAngular/toas/css/toastr.css" rel="stylesheet" type="text/css" />
+    <link href="<%= ResolveClientUrl("~/")%>Pub/libAngular/toas/css/custom.css" rel="stylesheet" type="text/css" />
+    <script src="<%= ResolveClientUrl("~/")%>Pub/libAngular/toas/toastr.js" type="text/javascript"></script>
+    <script src="<%= ResolveClientUrl("~/")%>Pub/libAngular/toas/toastr.tpl.js" type="text/javascript"></script>
+    <link href="<%= ResolveClientUrl("~/")%>Pub/libAngular/loadingBar/loading-bar.css" rel="stylesheet" />
+    <script src="<%= ResolveClientUrl("~/")%>Pub/libAngular/loadingBar/loading-bar.js"></script>
+
+     <script type="text/javascript" src="<%= ResolveClientUrl("~/")%>Pub/EasyLayout/Js/jquery-ui.js"></script>
+
+    <script src="<%= ResolveClientUrl("~/")%>Pub/jsModule/Angular/Util/Tools.js"></script>
+    <script src="<%= ResolveClientUrl("~/")%>Pub/jsModule/Angular/Util/Language.js"></script>
+     
+
+    <script>
+        var appMaster;
+        try {
+            angular.module("ngMasterAg");
+        } catch (e) {
+            appMaster = angular.module("ngMasterAg", ['ngTouch', 'ui.grid', 'ui.grid.pagination', 'toastr', 'chieffancypants.loadingBar', 'ngAnimate']);
+        }
+
+        appMaster.config(function (cfpLoadingBarProvider) {
+            cfpLoadingBarProvider.includeSpinner = true;
+        })
+
+        /*appMaster.directive('loading', function () {
+          return {
+            restrict: 'E',
+            replace:true,
+            template: '<div class="loading"><img src="http://www.nasa.gov/multimedia/videogallery/ajax-loader.gif" width="20" height="20" />LOADING...</div>',
+            link: function (scope, element, attr) {
+                  scope.$watch('loading', function (val) {
+                      if (val)
+                          $(element).show();
+                      else
+                          $(element).hide();
+                  });
+            }
+      }
+    })*/
+    </script>
+   
+    <%--<style>
+        .grid {
+            width: 600px;
+        }
+    </style>--%>
+
+
+    <script src="<%= ResolveClientUrl("~/")%>Pub/jsModule/Angular/Util/Service.js" type="text/javascript"></script>
+    <script src="<%= ResolveClientUrl("~/")%>Pub/jsModule/Angular/Util/Url.js" type="text/javascript"></script>
+</head>
+<%--ng-app="ngMasterAg" ng-controller="ctrMasterAg"--%>
+<body>
+    <form id="form1" runat="server" class="form-horizontal">
+        <loading></loading>
+
+        <script type="text/ng-template" id="default.html"><div class="{{toastClass}} {{toastType}}" ng-click="tapToast()">
+      <div ng-switch on="allowHtml">
+        <div ng-switch-default ng-if="title" class="{{titleClass}}" aria-label="{{title}}">{{title}}</div>
+        <div ng-switch-default class="{{messageClass}}" aria-label="{{message}}">{{message}}</div>
+        <div ng-switch-when="true" ng-if="title" class="{{titleClass}}" ng-bind-html="title"></div>
+        <div ng-switch-when="true" class="{{messageClass}}" ng-bind-html="message"></div>
+      </div>
+      <progress-bar ng-if="progressBar"></progress-bar>
+    </div>
+        </script>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

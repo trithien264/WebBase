@@ -1,0 +1,80 @@
+﻿.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {  
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    min-height: 32px;
+    min-width: 80px;
+    line-height: 32px;
+    vertical-align: middle;
+    -webkit-box-align: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    user-select: none;
+    color: currentcolor;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    font-style: inherit;
+    font-family: inherit;
+    text-decoration: none;
+    border-radius: 3px;
+    outline: none;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    padding: 0px 6px;
+    background: transparent;
+    font-variant: inherit;
+    overflow: hidden;
+    transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    color: rgba(255,255,255,0.87);
+    background-color: rgb(63,81,181);
+
+}
+
+/*******modal*******/
+.modal-header
+{
+    background-color:rgb(63,81,181);
+    color: rgba(255,255,255,0.87);
+    width: 100%;
+}
+.modal-header .modal-title {
+    line-height: 0.5;
+    font-size: 16px;
+    font-weight: 600
+}
+.modal-header .close
+{
+    color: white;   
+    margin-top: -10px;
+    opacity: .6;
+}
+
+.modal-body
+{
+    padding:10px
+}
+
+.modal-footer
+{
+    padding: 5px 20px 20px;
+    margin-top: 5px;
+}
+/*******Table*******/
+
+.table-bordered>tr>th, .table-bordered>tr>td, table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td
+{
+    padding: 6px;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    vertical-align:middle
+}

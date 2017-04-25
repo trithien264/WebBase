@@ -1,0 +1,6 @@
+﻿{
+	Args:[
+		"sql"
+		,"server=.;database=WebBase;uid=sa;pwd=trithien123."
+	]	
+}

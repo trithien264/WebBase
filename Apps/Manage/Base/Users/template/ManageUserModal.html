@@ -1,0 +1,25 @@
+﻿
+<table cellpadding="3" cellspacing="0" class="table table-bordered">
+    <tr>
+        <td><n-lang>USER_ID</n-lang></td>
+        <td><input class="input" type="text" disabled value="{{entity.user_id}}" /></td>
+    </tr>
+    <tr>
+        <td><n-lang>EMAIL</n-lang></td>
+        <td><input class="input" type="text" disabled ng-model="entity.email" /></td>
+    </tr>
+    <tr>
+        <td><n-lang>USER_DESC</n-lang></td>
+        <td><input class="input" type="text" ng-model="entity.user_desc" /></td>
+    </tr>
+
+    
+    <tr>
+        <td></td>
+        <td>          
+            <button type="button" ng-click="Save()" class="btnEdit btn-primary"><n-lang>SAVE</n-lang></button>     
+        </td>
+
+    </tr>
+</table>
+

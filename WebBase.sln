@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebBase", "http://localhost/WebBase", "{7D11B1D5-E41F-40A1-9D0D-F8428A09CD27}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{360e5638-4570-4002-a293-5336142e70f6}|NService.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/WebBase"
+		Debug.AspNetCompiler.PhysicalPath = "..\Source\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WebBase\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/WebBase"
+		Release.AspNetCompiler.PhysicalPath = "..\Source\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WebBase\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\Source\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBaseServices", "_csharp\WebBaseServices\WebBaseServices.csproj", "{FA003B6B-27E8-4CEC-BFD1-1CC16EBEC079}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NService", "..\..\NService\NService\NService.csproj", "{360E5638-4570-4002-A293-5336142E70F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D11B1D5-E41F-40A1-9D0D-F8428A09CD27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D11B1D5-E41F-40A1-9D0D-F8428A09CD27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D11B1D5-E41F-40A1-9D0D-F8428A09CD27}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7D11B1D5-E41F-40A1-9D0D-F8428A09CD27}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7D11B1D5-E41F-40A1-9D0D-F8428A09CD27}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7D11B1D5-E41F-40A1-9D0D-F8428A09CD27}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D11B1D5-E41F-40A1-9D0D-F8428A09CD27}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{7D11B1D5-E41F-40A1-9D0D-F8428A09CD27}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7D11B1D5-E41F-40A1-9D0D-F8428A09CD27}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7D11B1D5-E41F-40A1-9D0D-F8428A09CD27}.Release|x86.ActiveCfg = Debug|Any CPU
+		{FA003B6B-27E8-4CEC-BFD1-1CC16EBEC079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA003B6B-27E8-4CEC-BFD1-1CC16EBEC079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA003B6B-27E8-4CEC-BFD1-1CC16EBEC079}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{FA003B6B-27E8-4CEC-BFD1-1CC16EBEC079}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{FA003B6B-27E8-4CEC-BFD1-1CC16EBEC079}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FA003B6B-27E8-4CEC-BFD1-1CC16EBEC079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA003B6B-27E8-4CEC-BFD1-1CC16EBEC079}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA003B6B-27E8-4CEC-BFD1-1CC16EBEC079}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{FA003B6B-27E8-4CEC-BFD1-1CC16EBEC079}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{FA003B6B-27E8-4CEC-BFD1-1CC16EBEC079}.Release|x86.ActiveCfg = Release|Any CPU
+		{360E5638-4570-4002-A293-5336142E70F6}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{360E5638-4570-4002-A293-5336142E70F6}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{360E5638-4570-4002-A293-5336142E70F6}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{360E5638-4570-4002-A293-5336142E70F6}.Debug|x86.ActiveCfg = Debug|x86
+		{360E5638-4570-4002-A293-5336142E70F6}.Debug|x86.Build.0 = Debug|x86
+		{360E5638-4570-4002-A293-5336142E70F6}.Release|Any CPU.ActiveCfg = Release|x86
+		{360E5638-4570-4002-A293-5336142E70F6}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{360E5638-4570-4002-A293-5336142E70F6}.Release|Mixed Platforms.Build.0 = Release|x86
+		{360E5638-4570-4002-A293-5336142E70F6}.Release|x86.ActiveCfg = Release|x86
+		{360E5638-4570-4002-A293-5336142E70F6}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

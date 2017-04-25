@@ -1,0 +1,353 @@
+﻿***[Request]***
+b310466a-af4e-4c48-b8c7-af831b33a0a7==
+2017/04/18 00:16:49 615==
+::1==
+10003==
+http://localhost/WebBase/WebServicesBase.asmx/Run==
+http://localhost/WebBase/Apps/ui/User/UserInfo.aspx==
+==
+JsService=%7B%22service%22%3A%22Apps.ui.Apps.User.Users.LoginUser%22%2C%22params%22%3A%5B%7B%22email%22%3A%22web.trithien%40pyv.com.vn%22%2C%22pwd%22%3A%22aaa%22%2C%22autologin%22%3A%22false%22%7D%5D%7D
+***[End]***
+***[Item]***
+b310466a-af4e-4c48-b8c7-af831b33a0a7==
+1==
+2017/04/18 00:16:50 218==
+Info==
+DBHelper.getTran==
+Begin Transaction==
+[#ARG#]tranID:b7195654-9342-4bce-a329-27661dea31d0
+
+***[End]***
+***[Item]***
+b310466a-af4e-4c48-b8c7-af831b33a0a7==
+2==
+2017/04/18 00:16:50 693==
+Info==
+DBHelper.CommitTran==
+Commit Transaction==
+[#ARG#]tranID:b7195654-9342-4bce-a329-27661dea31d0
+
+***[End]***
+***[EndRequest]***
+b310466a-af4e-4c48-b8c7-af831b33a0a7==
+Info==
+1079.0178
+***[End]***
+***[Request]***
+0f2570e5-4bb7-431a-8eec-c7c09a28b2f5==
+2017/04/18 00:19:14 145==
+::1==
+10003==
+http://localhost/WebBase/WebServicesBase.asmx/Run==
+http://localhost/WebBase/Apps/Manage/Base/Rights/RightsMenu.aspx==
+==
+JsService=%7B%22service%22%3A%22Apps.Manage.Base.Rights.RightsMenu.SaveMenuRights%22%2C%22params%22%3A%5B%7B%22user_id%22%3A10003%2C%22user_desc%22%3A%22Nickel+Pham%22%2C%22email%22%3A%22web.trithien%40pyv.com.vn%22%2C%22%24%24hashKey%22%3A%22uiGrid-0014%22%2C%22isSelected%22%3Atrue%2C%22menu_id%22%3A3003%7D%5D%7D
+***[End]***
+***[Item]***
+0f2570e5-4bb7-431a-8eec-c7c09a28b2f5==
+1==
+2017/04/18 00:19:14 154==
+Info==
+DBHelper.getTran==
+Begin Transaction==
+[#ARG#]tranID:151e7d7b-d46f-4c1d-8c63-a2664a271cb6
+
+***[End]***
+***[Item]***
+0f2570e5-4bb7-431a-8eec-c7c09a28b2f5==
+2==
+2017/04/18 00:19:14 181==
+Error==
+DBHelper.Execute==
+[DBHelper.Execute]==
+[#ARG#]tranID:151e7d7b-d46f-4c1d-8c63-a2664a271cb6
+[#ARG#]tran:OK
+[#ARG#]DBName:DatabaseApp
+[#ARG#]cmdName:Apps.Manage.Base.Rights.insertMenuRights
+[#ARG#] cmd:[DbCommand]
+DB:WebBase(.)
+Text	
+
+INSERT INTO base_userrights(menu_id,user_id,right_kind1)
+VALUES(@menu_id,@user_id,@right_kind)
+	
+Parameters:
+@menu_id[Int32] = 3003
+@user_id[Int32] = 10003
+@right_kind[String] = N'menu'
+
+
+[#ARG#]ex:Invalid column name 'right_kind1'.
+
+***[End]***
+***[Item]***
+0f2570e5-4bb7-431a-8eec-c7c09a28b2f5==
+3==
+2017/04/18 00:19:14 283==
+Warn==
+DBHelper.RollbackTran==
+Rollback Transaction==
+[#ARG#]tranID:151e7d7b-d46f-4c1d-8c63-a2664a271cb6
+
+***[End]***
+***[Item]***
+0f2570e5-4bb7-431a-8eec-c7c09a28b2f5==
+4==
+2017/04/18 00:19:14 283==
+Error==
+ServiceCaller.CallToDic==
+Application Exception==
+[#ARG#]Message:Message error: Invalid column name 'right_kind1'.
+[#ARG#]ApplicationException:System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'right_kind1'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at NService.Tools.Database.DoExecuteNonQuery(DbCommand command)
+   at NService.Tools.Database.ExecuteNonQuery(DbCommand command, DbTransaction transaction)
+   at NService.Tools.DBHelper.Execute[T](String tranID, String cmdName, Dictionary`2 args)
+   at NService.Tools.DBHelper.Execute(String tranID, String cmdName, Dictionary`2 args)
+   at NService.Tools.DBHelper.Execute(String cmdName, Dictionary`2 args)
+   at Apps.Manage.Base.Rights.RightsMenu.SaveMenuRights(Dictionary`2 args)
+ClientConnectionId:bef85c37-63e6-4c28-acca-4de407389135
+
+***[End]***
+***[EndRequest]***
+0f2570e5-4bb7-431a-8eec-c7c09a28b2f5==
+Error==
+205.6752
+***[End]***
+***[Request]***
+c26bebb0-49b0-4788-b95b-6e3055125689==
+2017/04/18 00:19:14 766==
+::1==
+10003==
+http://localhost/WebBase/WebServicesBase.asmx/Run==
+http://localhost/WebBase/Apps/Manage/Base/Rights/RightsMenu.aspx==
+==
+JsService=%7B%22service%22%3A%22Apps.Manage.Base.Rights.RightsMenu.SaveMenuRights%22%2C%22params%22%3A%5B%7B%22user_id%22%3A30003%2C%22user_desc%22%3A%22test111%22%2C%22email%22%3A%22test%22%2C%22%24%24hashKey%22%3A%22uiGrid-0016%22%2C%22isSelected%22%3Atrue%2C%22menu_id%22%3A3003%7D%5D%7D
+***[End]***
+***[Item]***
+c26bebb0-49b0-4788-b95b-6e3055125689==
+1==
+2017/04/18 00:19:14 771==
+Info==
+DBHelper.getTran==
+Begin Transaction==
+[#ARG#]tranID:718c41da-6da6-4e4d-8a55-e55c6db7e50c
+
+***[End]***
+***[Item]***
+c26bebb0-49b0-4788-b95b-6e3055125689==
+2==
+2017/04/18 00:19:14 774==
+Error==
+DBHelper.Execute==
+[DBHelper.Execute]==
+[#ARG#]tranID:718c41da-6da6-4e4d-8a55-e55c6db7e50c
+[#ARG#]tran:OK
+[#ARG#]DBName:DatabaseApp
+[#ARG#]cmdName:Apps.Manage.Base.Rights.insertMenuRights
+[#ARG#] cmd:[DbCommand]
+DB:WebBase(.)
+Text	
+
+INSERT INTO base_userrights(menu_id,user_id,right_kind1)
+VALUES(@menu_id,@user_id,@right_kind)
+	
+Parameters:
+@menu_id[Int32] = 3003
+@user_id[Int32] = 30003
+@right_kind[String] = N'menu'
+
+
+[#ARG#]ex:Invalid column name 'right_kind1'.
+
+***[End]***
+***[Item]***
+c26bebb0-49b0-4788-b95b-6e3055125689==
+3==
+2017/04/18 00:19:14 776==
+Warn==
+DBHelper.RollbackTran==
+Rollback Transaction==
+[#ARG#]tranID:718c41da-6da6-4e4d-8a55-e55c6db7e50c
+
+***[End]***
+***[Item]***
+c26bebb0-49b0-4788-b95b-6e3055125689==
+4==
+2017/04/18 00:19:14 777==
+Error==
+ServiceCaller.CallToDic==
+Application Exception==
+[#ARG#]Message:Message error: Invalid column name 'right_kind1'.
+[#ARG#]ApplicationException:System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'right_kind1'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at NService.Tools.Database.DoExecuteNonQuery(DbCommand command)
+   at NService.Tools.Database.ExecuteNonQuery(DbCommand command, DbTransaction transaction)
+   at NService.Tools.DBHelper.Execute[T](String tranID, String cmdName, Dictionary`2 args)
+   at NService.Tools.DBHelper.Execute(String tranID, String cmdName, Dictionary`2 args)
+   at NService.Tools.DBHelper.Execute(String cmdName, Dictionary`2 args)
+   at Apps.Manage.Base.Rights.RightsMenu.SaveMenuRights(Dictionary`2 args)
+ClientConnectionId:bef85c37-63e6-4c28-acca-4de407389135
+
+***[End]***
+***[EndRequest]***
+c26bebb0-49b0-4788-b95b-6e3055125689==
+Error==
+11.4264
+***[End]***
+***[Request]***
+fa76783f-7bfa-4f26-ab9e-769e1aded4b5==
+2017/04/18 00:19:52 674==
+::1==
+10003==
+http://localhost/WebBase/WebServicesBase.asmx/Run==
+http://localhost/WebBase/Apps/Manage/Base/Rights/RightsMenu.aspx==
+==
+JsService=%7B%22service%22%3A%22Apps.Manage.Base.Rights.RightsMenu.SaveMenuRights%22%2C%22params%22%3A%5B%7B%22user_id%22%3A10003%2C%22user_desc%22%3A%22Nickel+Pham%22%2C%22email%22%3A%22web.trithien%40pyv.com.vn%22%2C%22%24%24hashKey%22%3A%22uiGrid-0014%22%2C%22isSelected%22%3Afalse%2C%22menu_id%22%3A3003%7D%5D%7D
+***[End]***
+***[Item]***
+fa76783f-7bfa-4f26-ab9e-769e1aded4b5==
+1==
+2017/04/18 00:19:52 699==
+Info==
+DBHelper.getTran==
+Begin Transaction==
+[#ARG#]tranID:4b2938b9-ef1d-4a52-93c2-01fd1ba8398d
+
+***[End]***
+***[Item]***
+fa76783f-7bfa-4f26-ab9e-769e1aded4b5==
+2==
+2017/04/18 00:19:52 713==
+Info==
+DBHelper.CommitTran==
+Commit Transaction==
+[#ARG#]tranID:4b2938b9-ef1d-4a52-93c2-01fd1ba8398d
+
+***[End]***
+***[EndRequest]***
+fa76783f-7bfa-4f26-ab9e-769e1aded4b5==
+Info==
+40.1276
+***[End]***
+***[Request]***
+e98b5cfd-f930-44ce-a7b4-4aae3b36a718==
+2017/04/18 00:19:53 362==
+::1==
+10003==
+http://localhost/WebBase/WebServicesBase.asmx/Run==
+http://localhost/WebBase/Apps/Manage/Base/Rights/RightsMenu.aspx==
+==
+JsService=%7B%22service%22%3A%22Apps.Manage.Base.Rights.RightsMenu.SaveMenuRights%22%2C%22params%22%3A%5B%7B%22user_id%22%3A10003%2C%22user_desc%22%3A%22Nickel+Pham%22%2C%22email%22%3A%22web.trithien%40pyv.com.vn%22%2C%22%24%24hashKey%22%3A%22uiGrid-0014%22%2C%22isSelected%22%3Atrue%2C%22menu_id%22%3A3003%7D%5D%7D
+***[End]***
+***[Item]***
+e98b5cfd-f930-44ce-a7b4-4aae3b36a718==
+1==
+2017/04/18 00:19:53 369==
+Info==
+DBHelper.getTran==
+Begin Transaction==
+[#ARG#]tranID:af1ebbb0-f5f3-45d0-9fa9-bdf227057e55
+
+***[End]***
+***[Item]***
+e98b5cfd-f930-44ce-a7b4-4aae3b36a718==
+2==
+2017/04/18 00:19:53 380==
+Info==
+DBHelper.CommitTran==
+Commit Transaction==
+[#ARG#]tranID:af1ebbb0-f5f3-45d0-9fa9-bdf227057e55
+
+***[End]***
+***[EndRequest]***
+e98b5cfd-f930-44ce-a7b4-4aae3b36a718==
+Info==
+18.664
+***[End]***
+***[Request]***
+d739d253-0f04-4b52-a161-fb5587aac1c2==
+2017/04/18 00:19:54 433==
+::1==
+10003==
+http://localhost/WebBase/WebServicesBase.asmx/Run==
+http://localhost/WebBase/Apps/Manage/Base/Rights/RightsMenu.aspx==
+==
+JsService=%7B%22service%22%3A%22Apps.Manage.Base.Rights.RightsMenu.SaveMenuRights%22%2C%22params%22%3A%5B%7B%22user_id%22%3A30003%2C%22user_desc%22%3A%22test111%22%2C%22email%22%3A%22test%22%2C%22%24%24hashKey%22%3A%22uiGrid-0016%22%2C%22isSelected%22%3Afalse%2C%22menu_id%22%3A3003%7D%5D%7D
+***[End]***
+***[Item]***
+d739d253-0f04-4b52-a161-fb5587aac1c2==
+1==
+2017/04/18 00:19:54 438==
+Info==
+DBHelper.getTran==
+Begin Transaction==
+[#ARG#]tranID:497806b6-dd18-4f6c-807d-101c273ce834
+
+***[End]***
+***[Item]***
+d739d253-0f04-4b52-a161-fb5587aac1c2==
+2==
+2017/04/18 00:19:54 440==
+Info==
+DBHelper.CommitTran==
+Commit Transaction==
+[#ARG#]tranID:497806b6-dd18-4f6c-807d-101c273ce834
+
+***[End]***
+***[EndRequest]***
+d739d253-0f04-4b52-a161-fb5587aac1c2==
+Info==
+8.3988
+***[End]***
+***[Request]***
+1c3215ca-f075-48fc-a09a-358a047baa63==
+2017/04/18 00:19:55 201==
+::1==
+10003==
+http://localhost/WebBase/WebServicesBase.asmx/Run==
+http://localhost/WebBase/Apps/Manage/Base/Rights/RightsMenu.aspx==
+==
+JsService=%7B%22service%22%3A%22Apps.Manage.Base.Rights.RightsMenu.SaveMenuRights%22%2C%22params%22%3A%5B%7B%22user_id%22%3A30003%2C%22user_desc%22%3A%22test111%22%2C%22email%22%3A%22test%22%2C%22%24%24hashKey%22%3A%22uiGrid-0016%22%2C%22isSelected%22%3Atrue%2C%22menu_id%22%3A3003%7D%5D%7D
+***[End]***
+***[Item]***
+1c3215ca-f075-48fc-a09a-358a047baa63==
+1==
+2017/04/18 00:19:55 205==
+Info==
+DBHelper.getTran==
+Begin Transaction==
+[#ARG#]tranID:eaa2258c-4d6c-418d-a6c0-36bd86f9b5d8
+
+***[End]***
+***[Item]***
+1c3215ca-f075-48fc-a09a-358a047baa63==
+2==
+2017/04/18 00:19:55 208==
+Info==
+DBHelper.CommitTran==
+Commit Transaction==
+[#ARG#]tranID:eaa2258c-4d6c-418d-a6c0-36bd86f9b5d8
+
+***[End]***
+***[EndRequest]***
+1c3215ca-f075-48fc-a09a-358a047baa63==
+Info==
+8.3988
+***[End]***
